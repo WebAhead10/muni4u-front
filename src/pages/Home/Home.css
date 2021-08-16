@@ -1,0 +1,52 @@
+.home {
+  box-sizing: border-box;
+  align-items: center;
+  background-image: url("../../images/city.jpg");
+  background-size: contain;
+  size: initial;
+  background-repeat: no-repeat;
+}
+div {
+  background-image: url("../../images/bg.jpg");
+  height: 100%;
+}
+h2 {
+  color: #426a5a;
+  font-family: Georgia, "Times New Roman", Times, serif;
+  margin-bottom: 1vh;
+}
+
+h1 {
+  color: #426a5a;
+  font-family: Georgia, "Times New Roman", Times, serif;
+}
+
+.btn {
+  background-color: #ad8761;
+  color: #ffffff;
+  font-family: Georgia, "Times New Roman", Times, serif;
+  font-size: large;
+  border-radius: 8px;
+  size: 15vw;
+  margin-top: 4vh;
+  padding: 0.5%;
+}
+
+textarea {
+  background-color: #c5ddd3;
+  border-radius: 8px;
+  size: 5vh;
+  padding: 0.8%;
+  font-family: Georgia, "Times New Roman", Times, serif;
+  font-size: larger;
+  font-weight: bold;
+}
+
+input {
+  background-color: #c5ddd3;
+  height: 4vh;
+  border-radius: 8px;
+  font-family: Georgia, "Times New Roman", Times, serif;
+  font-size: larger;
+  font-weight: bold;
+}
