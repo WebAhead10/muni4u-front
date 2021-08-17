@@ -9,9 +9,9 @@ function Request() {
       <h2>Subject Of Request :</h2>
       <input></input>
       <h2>Your Request :</h2>
-      <textarea class="text"></textarea>
+      <textarea className="text"></textarea>
       <br></br>
-      <button class="btn">Submit</button>
+      <button className="btn">Submit</button>
     </div>
   );
 }

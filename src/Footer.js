@@ -3,7 +3,7 @@ import React from "react";
 function Footer() {
   return (
     <footer>
-      <ul class="links">
+      <ul className="links">
         <li>
           <a href="default.asp">Home</a>
         </li>

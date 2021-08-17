@@ -7,7 +7,7 @@ function SignIn() {
       <h2>Password :</h2>
      <input></input><br>
 </br>
-      <button class="btn">Sign In</button>
+      <button className="btn">Sign In</button>
     </div>
   );
 }
