@@ -2,16 +2,16 @@ import React from "react";
 
 export default function SignUp(props) {
   const [fullname, setFullName] = React.useState("");
-  const [haweye, setID] = React.useState("");
+  const [haweye, setHaweye] = React.useState("");
   const [phone, setPhone] = React.useState("");
   const [email, setEmail] = React.useState("");
   const [address, setAddress] = React.useState("");
-  const [password, setPassword] = React.useState("");
+  const [pass1, setPass1] = React.useState("");
   const [pass2, setPass2] = React.useState("");
 
   function Click(e) {
       e.preventDefault();
-      const data = { fullname, haweye, phone, email, address, password, pass2 };
+      const data = { fullname, haweye, phone, email, address, pass1, pass2 };
       console.log(data);
       fetch("http://localhost:4000/signUp", {
           method: "POST",
@@ -32,11 +32,11 @@ export default function SignUp(props) {
       <h6>Please enter your details</h6>
       <div>
         <label>Full Name:</label>
-        <input id="username" name="username" value={fullname} onChange={(event) => setFullName(event.target.value)} required></input>
+        <input id="fullname" name="fullname" value={fullname} onChange={(event) => setFullName(event.target.value)} required></input>
       </div>
       <div>
         <label>ID No. :</label>
-        <input id="idnumber" name="idnumber" value={haweye} onChange={(event) => setID(event.target.value)} required></input>
+        <input id="haweye" name="haweye" value={haweye} onChange={(event) => setHaweye(event.target.value)} required></input>
       </div>
       <div>
         <label>Phone No. :</label>
@@ -53,7 +53,7 @@ export default function SignUp(props) {
       <h6>Create a password</h6>
       <div>
         <label>Password:</label>
-        <input id="password" name="password" value={password} onChange={(event) => setPassword(event.target.value)} required></input>
+        <input id="pass1" name="pass1" value={pass1} onChange={(event) => setPass1(event.target.value)} required></input>
       </div>
       <div>
         <label>Password Again:</label>
