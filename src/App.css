@@ -22,4 +22,88 @@ footer {
 
   align-items: center;
   list-style: none;
+  font-family: Georgia, "Times New Roman", Times, serif;
+}
+
+.home {
+  box-sizing: border-box;
+  align-items: center;
+  background-image: url("images/city.jpg");
+  background-size: contain;
+  size: initial;
+  background-repeat: no-repeat;
+}
+
+label {
+  color: #426a5a;
+  font-family: Georgia, "Times New Roman", Times, serif;
+  margin-bottom: 1vh;
+}
+
+div {
+  display: block;
+}
+h1 {
+  color: #426a5a;
+  font-family: Georgia, "Times New Roman", Times, serif;
+}
+
+.body {
+  background-image: url("images/bg.jpg");
+  margin-top: 2vh;
+  height: 98vh;
+}
+
+.container {
+  background-color: #cee0d96b;
+  display: block;
+  margin: auto;
+  border-radius: 8px;
+  max-width: 20%;
+  max-height: 100%;
+  align-content: center;
+  justify-content: center;
+  flex-direction: column;
+  text-align: left;
+}
+
+.btn {
+  background-color: #ad8761cc;
+  color: #ffffff;
+  font-family: Georgia, "Times New Roman", Times, serif;
+  font-size: large;
+  border-radius: 8px;
+  size: 30 vw;
+  margin-top: 4vh;
+  padding: 0.7%;
+  align-content: center;
+}
+
+/* textarea {
+  background-color: #c5ddd3;
+  border-radius: 8px;
+  size: 5vh;
+  padding: 0.8%;
+  font-family: Georgia, "Times New Roman", Times, serif;
+  font-size: larger;
+  font-weight: bold;
+} */
+
+input {
+  background-color: #c5ddd3;
+  height: 4vh;
+  border-radius: 8px;
+  font-family: Georgia, "Times New Roman", Times, serif;
+  font-size: larger;
+  font-weight: bold;
+  margin-top: 1vh;
+  margin-bottom: 1vh;
+}
+
+h4 {
+  color: #b1b1b1;
+  font-family: Georgia, "Times New Roman", Times, serif;
+  margin-bottom: 1vh;
+  margin-top: 1vh;
+  align-self: flex-start;
 }

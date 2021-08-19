@@ -1,14 +1,19 @@
 import React from "react";
-import "./Home.css";
 
 function Home() {
   return (
-    <div class="home">
-      <h2>date</h2>
-      <h2> Hi user</h2><br></br>
-      <div className="body">
-        <h1>For any request or complaint</h1>
-        <button className="btn">Contact Us</button>
+    <div class="home" height="100vh">
+      <div class="body" height="50%">
+        <label id="date" name="date"></label>
+        <label id="welcome" name="welcome">
+          Hi user
+        </label>
+      </div>
+      <div class="body" height="50%">
+        <label id="request" name="request">
+          For any request or complaint
+        </label>
+        <button class="btn">Contact Us</button>
       </div>
     </div>
   );
