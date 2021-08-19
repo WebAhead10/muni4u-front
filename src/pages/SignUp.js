@@ -30,7 +30,7 @@ export default function SignUp(props) {
       });
   }
   return (
-    <Header />
+
     <div className="body">
       <div className="container">
         <h4>Please enter your details</h4>
