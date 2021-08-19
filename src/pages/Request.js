@@ -1,34 +1,77 @@
 import React from "react";
 
-function Request() {
+export default function Request(props) {
+  const [fullname, setFullName] = React.useState("");
+  const [haweye, setHaweye] = React.useState("");
+  const [sub, setSub] = React.useState("");
+  const [content, setContent] = React.useState("");
+
+  function Click(e) {
+    e.preventDefault();
+    const data = { fullname, haweye, sub, content };
+    console.log(data);
+    fetch("http://localhost:4000/request", {
+      method: "POST",
+      body: JSON.stringify(data),
+      headers: { "content-type": "application/json" },
+    })
+      .then((res) => {
+        if (res.status === 201) {
+          //   <Route path="/Profile" component={lastPage} /> need a new page
+          console.log("success!");
+        }
+      })
+      .catch((error) => {
+        console.log(error);
+      });
+  }
   return (
     <div>
+      <h6>date of today</h6>
+      <h3>Contact us:</h3>
       <div>
-        <label>Name :</label>
-        <input id="fname" name="fname"></input>
-      </div>
-      <div>
-        <label for="haweye">ID :</label>
+        <label>Full Name:</label>
         <input
-          id="haweye"
-          name="haweye"
-          placeholder="Please enter your ID"
+          id="fullname"
+          name="fullname"
+          value={fullname}
+          onChange={(event) => setFullName(event.target.value)}
+          required
         ></input>
       </div>
       <div>
-        <label for="sub">Subject Of Request :</label>
-        <input id="sub" name="sub" placeholder="Please enter your ID"></input>
+        <label>ID No. :</label>
+        <input
+          id="haweye"
+          name="haweye"
+          value={haweye}
+          onChange={(event) => setHaweye(event.target.value)}
+          required
+        ></input>
       </div>
       <div>
-        <label for="request">Your Request :</label>
-        <input id="request" name="request"></input>
+        <label>Subject of request:</label>
+        <input
+          id="sub"
+          name="sub"
+          value={sub}
+          onChange={(event) => setSub(event.target.value)}
+          required
+        ></input>
       </div>
-
       <div>
-        <button className="btn">Submit</button>
+        <label>Your request:</label>
+        <input
+          id="content"
+          name="content"
+          value={content}
+          onChange={(event) => setContent(event.target.value)}
+          required
+        ></input>
       </div>
+      <button className="btn" onClick={Click}>
+        Send
+      </button>
     </div>
   );
 }
-
-export default Request;
