@@ -7,10 +7,12 @@ import Request from "./pages/Request";
 import Footer from "./Footer";
 import Home from "./pages/Home/Home";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import Header from "./Header";
 
 function App() {
   return (
     <Router>
+      <Header />
       <div className="App">
         <Switch>
           <Route path="/" exact component={Home} />
