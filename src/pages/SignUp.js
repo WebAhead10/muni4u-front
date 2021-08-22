@@ -1,5 +1,6 @@
 import React from "react";
 import "../App.css";
+import Signin from "./SignIn"
 
 export default function SignUp(props) {
   const [fullname, setFullName] = React.useState("");
@@ -12,17 +13,22 @@ export default function SignUp(props) {
 
   function Click(e) {
     e.preventDefault();
-    const data = { fullname, haweye, phone, email, address, pass1, pass2 };
+    const data = { fullname, haweye, phone, email, address, pass1 };
+    // please check if password 1 match to Password 2 
     console.log(data);
-    fetch("http://localhost:4000/signUp", {
+    fetch("https://muni4u.herokuapp.com/signUp", {
       method: "POST",
       body: JSON.stringify(data),
-      headers: { "content-type": "application/json" },
+      headers: { "content-type": "application/json"},
     })
       .then((res) => {
-        if (res.status === 201) {
-          // window.location.href = "/home"
-          console.log("success!");
+        if (res.success) {
+          console.log("work !");
+          return(<Signin/>)
+        }
+        else{
+          // (1) we have to put some note to the user
+          console.log("not work !");
         }
       })
       .catch((error) => {

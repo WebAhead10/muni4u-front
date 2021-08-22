@@ -8,17 +8,21 @@ function SignIn(props) {
 
   function Click(e) {
     e.preventDefault();
-    const data = {  phone, pass1 };
+    const data = { phone, pass1 };
     console.log(data);
-    fetch("http://localhost:4000/signIn", {
+    fetch("https://muni4u.herokuapp.com/signIn", {
       method: "POST",
       body: JSON.stringify(data),
       headers: { "content-type": "application/json" },
     })
       .then((res) => {
-        if (res.status === 201) {
-          // window.location.href = "/home"
-          console.log("success!");
+        if (res.success) {
+          console.log("work !");
+          // we have to send the user to dashboard page 
+        }
+        else{
+          console.log("not work !");
+          //(1) we have to put some note to the user
         }
       })
       .catch((error) => {
@@ -33,9 +37,9 @@ function SignIn(props) {
       </div>
       <div>
         <input
-          id="phone"
-          name="phone"
-          value={phone}
+          id="id"
+          name="id"
+          value={phone} // pleas change this to be match with the back-end
           onChange={(event) => setPhone(event.target.value)}
           required
         ></input>
@@ -45,9 +49,9 @@ function SignIn(props) {
       </div>
       <div>
         <input
-          id="pass1"
-          name="pass1"
-          value={pass1}
+          id="password"
+          name="password"
+          value={pass1} // pleas change this to be match with the back-end
           onChange={(event) => setPass1(event.target.value)}
           required
         ></input>
