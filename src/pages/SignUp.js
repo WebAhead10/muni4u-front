@@ -120,7 +120,7 @@ export default function SignUp(props) {
             required
           ></input>
         </div>
-        <div>
+        <div className="btn-div">
           <button className="btn" onClick={Click}>
             Sign Up
           </button>

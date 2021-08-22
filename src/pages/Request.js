@@ -26,52 +26,60 @@ export default function Request(props) {
       });
   }
   return (
-    <div>
-      <h6>date of today</h6>
-      <h3>Contact us:</h3>
-      <div>
-        <label>Full Name:</label>
-        <input
-          id="fullname"
-          name="fullname"
-          value={fullname}
-          onChange={(event) => setFullName(event.target.value)}
-          required
-        ></input>
+    <div className="body">
+      <div className="container">
+        <div>
+          <label id="date" name="date">
+            Date of today
+          </label>
+          <h3>Contact us:</h3>
+          <div>
+            <label>Full Name:</label>
+            <input
+              id="fullname"
+              name="fullname"
+              value={fullname}
+              onChange={(event) => setFullName(event.target.value)}
+              required
+            ></input>
+          </div>
+          <div>
+            <label>ID No. :</label>
+            <input
+              id="haweye"
+              name="haweye"
+              value={haweye}
+              onChange={(event) => setHaweye(event.target.value)}
+              required
+            ></input>
+          </div>
+          <div>
+            <label>Subject of request:</label>
+            <input
+              id="sub"
+              name="sub"
+              value={sub}
+              onChange={(event) => setSub(event.target.value)}
+              required
+            ></input>
+          </div>
+          <div>
+            <label>Your request:</label>
+            <input
+              id="content"
+              name="content"
+              value={content}
+              onChange={(event) => setContent(event.target.value)}
+              required
+            ></input>
+          </div>
+          <div className="btn-div">
+            <button className="btn" onClick={Click}>
+              Send
+            </button>
+          </div>
+        </div>
       </div>
-      <div>
-        <label>ID No. :</label>
-        <input
-          id="haweye"
-          name="haweye"
-          value={haweye}
-          onChange={(event) => setHaweye(event.target.value)}
-          required
-        ></input>
-      </div>
-      <div>
-        <label>Subject of request:</label>
-        <input
-          id="sub"
-          name="sub"
-          value={sub}
-          onChange={(event) => setSub(event.target.value)}
-          required
-        ></input>
-      </div>
-      <div>
-        <label>Your request:</label>
-        <input
-          id="content"
-          name="content"
-          value={content}
-          onChange={(event) => setContent(event.target.value)}
-          required
-        ></input>
-      </div>
-      <button className="btn" onClick={Click}>
-        Send
-      </button>
     </div>
   );
 }
