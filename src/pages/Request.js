@@ -1,4 +1,5 @@
 import React from "react";
+import Profile from "./Profile/Profile";
 
 export default function Request(props) {
   const [fullname, setFullName] = React.useState("");
@@ -10,6 +11,9 @@ export default function Request(props) {
     e.preventDefault();
     const data = { fullname, haweye, sub, content };
     console.log(data);
+
+    // should we change this link to heroku?
+
     fetch("http://localhost:4000/request", {
       method: "POST",
       body: JSON.stringify(data),
@@ -17,7 +21,7 @@ export default function Request(props) {
     })
       .then((res) => {
         if (res.status === 201) {
-          //   <Route path="/Profile" component={lastPage} /> need a new page
+          return <Home />;
           console.log("success!");
         }
       })

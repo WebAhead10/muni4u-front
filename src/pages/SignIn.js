@@ -1,14 +1,15 @@
 import React from "react";
+import App from "../App";
 import "../App.css";
+import Profile from "./Profile/Profile";
 
 function SignIn(props) {
-  const [phone, setPhone] = React.useState("");
-
+  const [haweye, setHaweye] = React.useState("");
   const [pass1, setPass1] = React.useState("");
 
   function Click(e) {
     e.preventDefault();
-    const data = { phone, pass1 };
+    const data = { haweye, pass1 };
     console.log(data);
     fetch("https://muni4u.herokuapp.com/signIn", {
       method: "POST",
@@ -17,12 +18,13 @@ function SignIn(props) {
     })
       .then((res) => {
         if (res.success) {
-          console.log("work !");
-          // we have to send the user to dashboard page 
-        }
-        else{
+          // console.log("work !");
+          // we have to send the user to dashboard page
+          return <Home />;
+        } else {
           console.log("not work !");
           //(1) we have to put some note to the user
+          alert("Sorry,your ID or password not correct, please try again");
         }
       })
       .catch((error) => {
@@ -33,14 +35,14 @@ function SignIn(props) {
   return (
     <div className="body">
       <div>
-        <label>Phone :</label>
+        <label>ID :</label>
       </div>
       <div>
         <input
-          id="id"
-          name="id"
-          value={phone} // pleas change this to be match with the back-end
-          onChange={(event) => setPhone(event.target.value)}
+          id="haweye"
+          name="haweye"
+          value={haweye}
+          onChange={(event) => setHaweye(event.target.value)}
           required
         ></input>
       </div>
@@ -49,9 +51,9 @@ function SignIn(props) {
       </div>
       <div>
         <input
-          id="password"
-          name="password"
-          value={pass1} // pleas change this to be match with the back-end
+          id="pass1"
+          name="pass1"
+          value={pass1}
           onChange={(event) => setPass1(event.target.value)}
           required
         ></input>

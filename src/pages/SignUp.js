@@ -1,6 +1,7 @@
 import React from "react";
 import "../App.css";
-import Signin from "./SignIn"
+import Signin from "./SignIn";
+// import { Notification } from 'rsuite';
 
 export default function SignUp(props) {
   const [fullname, setFullName] = React.useState("");
@@ -13,20 +14,23 @@ export default function SignUp(props) {
 
   function Click(e) {
     e.preventDefault();
-    const data = { fullname, haweye, phone, email, address, pass1 };
-    // please check if password 1 match to Password 2 
+    const data = { fullname, haweye, phone, email, address, pass1, pass2 };
+    // please check if password 1 match to Password 2
+    if (pass1 === pass2) {
+      // Notification.success(props: NotificationProps);
+    }
+
     console.log(data);
     fetch("https://muni4u.herokuapp.com/signUp", {
       method: "POST",
       body: JSON.stringify(data),
-      headers: { "content-type": "application/json"},
+      headers: { "content-type": "application/json" },
     })
       .then((res) => {
         if (res.success) {
           console.log("work !");
-          return(<Signin/>)
-        }
-        else{
+          return <Signin />;
+        } else {
           // (1) we have to put some note to the user
           console.log("not work !");
         }
@@ -36,7 +40,6 @@ export default function SignUp(props) {
       });
   }
   return (
-
     <div className="body">
       <div className="container">
         <h4>Please enter your details</h4>
