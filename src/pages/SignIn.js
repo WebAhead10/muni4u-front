@@ -1,6 +1,7 @@
 import React from "react";
 import App from "../App";
 import "../App.css";
+import Home from "./Home/Home"
 import Profile from "./Profile/Profile";
 
 function SignIn(props) {
@@ -11,18 +12,18 @@ function SignIn(props) {
     e.preventDefault();
     const data = { haweye, pass1 };
     console.log(data);
-    fetch("https://muni4u.herokuapp.com/signIn", {
+    fetch("http://localhost:4000/signIn", {
       method: "POST",
       body: JSON.stringify(data),
       headers: { "content-type": "application/json" },
-    })
+    }).then((res) => res.json())
       .then((res) => {
-        if (res.success) {
-          // console.log("work !");
+        if (res.ok) {
+           console.log("work !");
           // we have to send the user to dashboard page
           return <Home />;
         } else {
-          console.log("not work !");
+          console.log("not work hhhhh!");
           //(1) we have to put some note to the user
           alert("Sorry,your ID or password not correct, please try again");
         }

@@ -1,5 +1,6 @@
 import React from "react";
 import Profile from "./Profile/Profile";
+import Home from "./Home/Home"
 
 export default function Request(props) {
   const [fullname, setFullName] = React.useState("");

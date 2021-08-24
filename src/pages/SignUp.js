@@ -1,9 +1,12 @@
 import React from "react";
 import "../App.css";
 import Signin from "./SignIn";
+import { useHistory } from "react-router-dom";
 // import { Notification } from 'rsuite';
 
 export default function SignUp(props) {
+  let history = useHistory();
+
   const [fullname, setFullName] = React.useState("");
   const [haweye, setHaweye] = React.useState("");
   const [phone, setPhone] = React.useState("");
@@ -21,15 +24,16 @@ export default function SignUp(props) {
     }
 
     console.log(data);
-    fetch("https://muni4u.herokuapp.com/signUp", {
+    fetch("http://localhost:4000/signUp", {
       method: "POST",
       body: JSON.stringify(data),
       headers: { "content-type": "application/json" },
-    })
+    }).then((res) => res.json())
       .then((res) => {
         if (res.success) {
           console.log("work !");
-          return <Signin />;
+          // this function is to change page
+          history.push("/SignIn");
         } else {
           // (1) we have to put some note to the user
           console.log("not work !");
