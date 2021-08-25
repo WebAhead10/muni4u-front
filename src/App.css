@@ -8,13 +8,13 @@ footer {
   display: flex;
   justify-content: space-around;
   align-items: center;
-  position: absolute;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  padding: 1rem;
-  background: #ad8761;
+  background-color: #ad8761;
   color: #fff;
+
+  position: static;
+  bottom: 0;
+  width: 100%;
+  text-align: center;
 }
 header {
   display: flex;
@@ -25,12 +25,24 @@ header {
   color: #fff;
   border-radius: 8px;
 }
+.lista{
+  list-style: none;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  text-align: center;
+
+
+  align-items: center;
+}
+li{
+  margin: 3%;
+}
 h3 {
   font-family: Arial, Helvetica, sans-serif;
   color: #ad8761cc;
 }
 .links {
-  width: 50%;
   display: flex;
   justify-content: space-around;
 
@@ -43,7 +55,7 @@ h3 {
   box-sizing: border-box;
   align-items: center;
   background-image: url("images/city.jpg");
-  background-size: contain;
+  background-size: cover;
   size: initial;
   background-repeat: no-repeat;
 }
@@ -56,7 +68,7 @@ label {
 
 div {
   display: block;
-  margin-left: 0.7vw;
+  /* margin-left: 0.7vw; */
 }
 h1 {
   color: #426a5a;
@@ -65,17 +77,13 @@ h1 {
 
 .body {
   background-image: url("images/bg.jpg");
-  margin-top: 2vh;
-  height: 98vh;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
 }
 
 .container {
   background-color: #cee0d96b;
-  display: block;
-  margin: auto;
-  border-radius: 8px;
-  max-width: 22%;
-  max-height: 100%;
   align-content: center;
   justify-content: center;
   flex-direction: column;

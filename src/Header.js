@@ -3,8 +3,8 @@ import React from "react";
 function Header() {
   return (
     <header>
-      <ul>
-          <img src="src/images/city.jpg" width="100px" height="100px" />
+      <ul className="lista">
+          {/* <img src="src/images/city.jpg" width="100px" height="100px" /> */}
       
         <li>
           <a href="/signUp">SignUp</a>
