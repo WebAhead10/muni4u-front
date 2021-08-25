@@ -5,16 +5,16 @@ function Footer() {
     <footer>
       <ul className="links">
         <li>
-          <a href="default.asp">Home</a>
+          <a href="/home">Home</a>
         </li>
         <li>
-          <a href="news.asp">Profile</a>
+          <a href="/Profile">Profile</a>
         </li>
         <li>
-          <a href="contact.asp">Request</a>
+          <a href="/Request">Request</a>
         </li>
         <li>
-          <a href="about.asp">Contact Us</a>
+          <a href="">Contact Us</a>
         </li>
       </ul>
     </footer>

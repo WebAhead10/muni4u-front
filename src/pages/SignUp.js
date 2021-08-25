@@ -19,6 +19,15 @@ export default function SignUp(props) {
     e.preventDefault();
     const data = { fullname, haweye, phone, email, address, pass1, pass2 };
     // please check if password 1 match to Password 2
+    
+   if(is_israeli_id_number(haweye))
+   {
+
+   }
+    // phone number 10
+
+    console.log(check_phone(phone));
+
     if (pass1 === pass2) {
       // Notification.success(props: NotificationProps);
     }
@@ -30,6 +39,7 @@ export default function SignUp(props) {
       headers: { "content-type": "application/json" },
     }).then((res) => res.json())
       .then((res) => {
+        console.log(res)
         if (res.success) {
           console.log("work !");
           // this function is to change page
@@ -141,4 +151,20 @@ export default function SignUp(props) {
       </div>
     </div>
   );
+
+  function is_israeli_id_number(id) {
+    id = String(id).trim();
+    if (id.length > 9 || isNaN(id)) return false;
+    id = id.length < 9 ? ("00000000" + id).slice(-9) : id;
+      return Array.from(id, Number).reduce((counter, digit, i) => {
+        const step = digit * ((i % 2) + 1);
+        return counter + (step > 9 ? step - 9 : step);
+      }) % 10 === 0;
+    
+  }
+
+  function check_phone(phone) {
+    return phone.length != 10 || isNaN(phone)? false: true;
+    
+  }
 }

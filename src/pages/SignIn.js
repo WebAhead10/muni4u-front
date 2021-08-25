@@ -3,10 +3,12 @@ import App from "../App";
 import "../App.css";
 import Home from "./Home/Home"
 import Profile from "./Profile/Profile";
+import { useHistory } from "react-router-dom";
 
 function SignIn(props) {
   const [haweye, setHaweye] = React.useState("");
   const [pass1, setPass1] = React.useState("");
+  let history = useHistory();
 
   function Click(e) {
     e.preventDefault();
@@ -18,12 +20,11 @@ function SignIn(props) {
       headers: { "content-type": "application/json" },
     }).then((res) => res.json())
       .then((res) => {
-        if (res.ok) {
+        if (res.success) {
            console.log("work !");
           // we have to send the user to dashboard page
-          return <Home />;
+          history.push("/Profile",{res});
         } else {
-          console.log("not work hhhhh!");
           //(1) we have to put some note to the user
           alert("Sorry,your ID or password not correct, please try again");
         }

@@ -1,18 +1,23 @@
 import React from "react";
 import List from "./list";
+import { useLocation } from 'react-router-dom';
 
 function Profile() {
+  const location = useLocation();
+
+  console.log(location.state.res)
+
   return (
     <div>
-      <img alt=""></img>
+      {/* <img alt=""></img> */}
       <div>
-        <label id="fname" name="fname"></label>
+        <label id="fname" name="fname">{location.state.res.data[0].fullname}</label>
       </div>
       <div>
-        <label id="phone" name="phone"></label>
+        <label id="phone" name="phone">{location.state.res.data[0].phone}</label>
       </div>
       <div>
-        <label id="address" name="address"></label>
+        <label id="address" name="address">{location.state.res.data[0].address}</label>
       </div>
       <div>
         <label id="reports" name="reports"></label>
