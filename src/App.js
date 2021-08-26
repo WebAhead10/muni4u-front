@@ -5,6 +5,7 @@ import SignUp from "./pages/SignUp";
 import Profile from "./pages/Profile/Profile";
 import Request from "./pages/Request";
 import Footer from "./Footer";
+import WelcomePage from "./Wpage";
 import Home from "./pages/Home/Home";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import Nav from "./Nav";
@@ -20,6 +21,7 @@ function App() {
           <Route path="/SignUp" component={SignUp} />
           <Route path="/SignIn" component={SignIn} />
           <Route path="/Request" component={Request} />
+          <Route path="/Wpage" component={WelcomePage} />
 
           <Request />
         </Switch>

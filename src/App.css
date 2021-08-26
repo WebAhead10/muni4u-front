@@ -16,6 +16,7 @@ footer {
   width: 100%;
   text-align: center;
 }
+
 nav {
   display: flex;
   justify-content: space-around;
@@ -25,7 +26,8 @@ nav {
   color: #fff;
   border-radius: 8px;
 }
-.lista{
+
+.lista {
   list-style: none;
   display: flex;
   justify-content: space-around;
@@ -35,13 +37,16 @@ nav {
 
   align-items: center;
 }
-li{
+
+li {
   margin: 3%;
 }
+
 h3 {
   font-family: Arial, Helvetica, sans-serif;
   color: #ad8761cc;
 }
+
 .links {
   display: flex;
   justify-content: space-around;
@@ -70,6 +75,7 @@ div {
   display: block;
   /* margin-left: 0.7vw; */
 }
+
 h1 {
   color: #426a5a;
   font-family: Georgia, "Times New Roman", Times, serif;
@@ -78,17 +84,17 @@ h1 {
 .body {
   background-image: url("images/bg.jpg");
   background-size: cover;
-  background-position: center;
+  /* background-position: center; */
   background-repeat: no-repeat;
 }
 
-.container {
+/* .container {
   background-color: #cee0d96b;
   align-content: center;
   justify-content: center;
   flex-direction: column;
   text-align: left;
-}
+} */
 
 .btn {
   background-color: #ad8761cc;
@@ -98,15 +104,18 @@ h1 {
   border-radius: 8px;
   size: 1 vh;
   margin-top: 2.5vh;
-  padding: 1.5%;
+  margin-bottom: 2.5vh;
+  padding: 0.5%;
   align-content: center;
 }
+
 .btn-div {
   display: flex;
   align-content: center;
   justify-content: center;
   text-align: center;
 }
+
 /* textarea {
   background-color: #c5ddd3;
   border-radius: 8px;

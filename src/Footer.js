@@ -5,13 +5,13 @@ function Footer() {
     <footer>
       <ul className="links">
         <li>
-          <a href="/home">Home</a>
+        <a href="/signIn">Sign In</a>
         </li>
         <li>
-          <a href="/Profile">Profile</a>
+        <a href="/signUp">SignUp</a> 
         </li>
         <li>
-          <a href="/Request">Request</a>
+        <a href="/Profile">Profile</a>
         </li>
         <li>
           <a href="">Contact Us</a>
