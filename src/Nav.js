@@ -1,8 +1,8 @@
 import React from "react";
 
-function Header() {
+function Nav() {
   return (
-    <header>
+    <nav>
       <ul className="lista">
           {/* <img src="src/images/city.jpg" width="100px" height="100px" /> */}
       
@@ -19,8 +19,8 @@ function Header() {
           <a href="/Request">Request</a>
         </li>
       </ul>
-    </header>
+    </nav>
   );
 }
 
-export default Header;
+export default Nav;

@@ -16,7 +16,7 @@ footer {
   width: 100%;
   text-align: center;
 }
-header {
+nav {
   display: flex;
   justify-content: space-around;
   align-items: left;

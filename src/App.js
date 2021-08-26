@@ -7,13 +7,13 @@ import Request from "./pages/Request";
 import Footer from "./Footer";
 import Home from "./pages/Home/Home";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
-import Header from "./Header";
+import Nav from "./Nav";
 
 function App() {
   return (
     <Router>
       <div className="App">
-      <Header />
+      <Nav />
         <Switch>
           <Route path="/" exact component={Home} />
           <Route path="/Profile" component={Profile} />
