@@ -5,8 +5,6 @@ import { useLocation } from 'react-router-dom';
 function Profile() {
   const location = useLocation();
 
-  console.log(location.state.res)
-
   return (
     <div>
       {/* <img alt=""></img> */}

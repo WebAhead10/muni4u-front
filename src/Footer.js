@@ -7,9 +7,9 @@ function Footer() {
         <li>
           <a href="/home">Home</a>
         </li>
-        <li>
+        {/* <li>
           <a href="/Profile">Profile</a>
-        </li>
+        </li> */}
         <li>
           <a href="/Request">Request</a>
         </li>
