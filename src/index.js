@@ -2,11 +2,11 @@ import React from "react";
 import ReactDOM from "react-dom";
 import "./index.css";
 import App from "./App";
-import SignIn from "./pages/SignIn";
-import SignUp from "./pages/SignUp";
-import Profile from "./pages/Profile/Profile";
-import Request from "./pages/Request";
-import Home from "./pages/Home/Home";
+// import SignIn from "./pages/SignIn";
+// import SignUp from "./pages/SignUp";
+// import Profile from "./pages/Profile/Profile";
+// import Request from "./pages/Request";
+// import Home from "./pages/Home/Home";
 
 ReactDOM.render(
   <React.StrictMode>

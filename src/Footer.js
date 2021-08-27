@@ -7,9 +7,9 @@ function Footer() {
         <li>
         <a href="/signIn">Sign In</a>
         </li>
-        <li>
-        <a href="/signUp">SignUp</a> 
-        </li>
+        {/* <li>
+          <a href="/Profile">Profile</a>
+        </li> */}
         <li>
         <a href="/Profile">Profile</a>
         </li>

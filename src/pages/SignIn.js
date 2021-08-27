@@ -1,8 +1,8 @@
 import React from "react";
-import App from "../App";
+// import App from "../App";
 import "../App.css";
-import Home from "./Home/Home"
-import Profile from "./Profile/Profile";
+// import Home from "./Home/Home"
+// import Profile from "./Profile/Profile";
 import { useHistory } from "react-router-dom";
 
 function SignIn(props) {
@@ -18,12 +18,13 @@ function SignIn(props) {
       method: "POST",
       body: JSON.stringify(data),
       headers: { "content-type": "application/json" },
-    }).then((res) => res.json())
+    })
+      .then((res) => res.json())
       .then((res) => {
         if (res.success) {
-           console.log("work !");
+          console.log("work !");
           // we have to send the user to dashboard page
-          history.push("/Profile",{res});
+          history.push("/Profile", { res });
         } else {
           //(1) we have to put some note to the user
           alert("Sorry,your ID or password not correct, please try again");
@@ -36,10 +37,11 @@ function SignIn(props) {
 
   return (
     <div className="body">
-      <div>
+      <label id="header" name="header">
+        You are Welcome
+      </label>
+      <div className="content">
         <label>ID :</label>
-      </div>
-      <div>
         <input
           id="haweye"
           name="haweye"
@@ -47,11 +49,7 @@ function SignIn(props) {
           onChange={(event) => setHaweye(event.target.value)}
           required
         ></input>
-      </div>
-      <div>
         <label>Password :</label>
-      </div>
-      <div>
         <input
           id="pass1"
           name="pass1"
@@ -59,9 +57,6 @@ function SignIn(props) {
           onChange={(event) => setPass1(event.target.value)}
           required
         ></input>
-      </div>
-
-      <div className="btn-div">
         <button className="btn" onClick={Click}>
           Sign In
         </button>

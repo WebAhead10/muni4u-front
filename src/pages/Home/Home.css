@@ -1,0 +1,35 @@
+
+#header {
+    position: absolute;
+    left: 40vw;
+    z-index: 10;
+    top: 7;
+    font-size: 150%;
+
+}
+#request{
+    margin: 10px;
+    font-size: 200%;
+
+}
+.body{
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    background-image: url("https://i.ibb.co/kQ7tK6L/spikes.png"); 
+}
+img{
+   
+    z-index: 1;
+    height: 50vh;
+    object-fit: contain;
+}
+.btn{
+    width: max-content;
+    align-self: center;
+}
+.second-row{
+display: flex;
+justify-content: space-around;
+margin: 0 20vw;
+}

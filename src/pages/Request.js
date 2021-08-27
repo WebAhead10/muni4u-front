@@ -1,6 +1,6 @@
 import React from "react";
-import Profile from "./Profile/Profile";
-import Home from "./Home/Home"
+// import Profile from "./Profile/Profile";
+import Home from "./Home/Home";
 
 export default function Request(props) {
   const [fullname, setFullName] = React.useState("");
@@ -31,59 +31,46 @@ export default function Request(props) {
       });
   }
   return (
-    <div className="body">
-      <div className="container">
-        <div>
-          <label id="date" name="date">
-            Date of today
-          </label>
-          <h3>Contact us:</h3>
-          <div>
-            <label>Full Name:</label>
-            <input
-              id="fullname"
-              name="fullname"
-              value={fullname}
-              onChange={(event) => setFullName(event.target.value)}
-              required
-            ></input>
-          </div>
-          <div>
-            <label>ID No. :</label>
-            <input
-              id="haweye"
-              name="haweye"
-              value={haweye}
-              onChange={(event) => setHaweye(event.target.value)}
-              required
-            ></input>
-          </div>
-          <div>
-            <label>Subject of request:</label>
-            <input
-              id="sub"
-              name="sub"
-              value={sub}
-              onChange={(event) => setSub(event.target.value)}
-              required
-            ></input>
-          </div>
-          <div>
-            <label>Your request:</label>
-            <input
-              id="content"
-              name="content"
-              value={content}
-              onChange={(event) => setContent(event.target.value)}
-              required
-            ></input>
-          </div>
-          <div className="btn-div">
-            <button className="btn" onClick={Click}>
-              Send
-            </button>
-          </div>
-        </div>
+    <div className="address">
+      <div>
+        <h1>Contact us:</h1>
+      </div>
+      <div className="content">
+        <label>Full Name:</label>
+        <input
+          id="fullname"
+          name="fullname"
+          value={fullname}
+          onChange={(event) => setFullName(event.target.value)}
+          required
+        ></input>
+        <label>ID No. :</label>
+        <input
+          id="haweye"
+          name="haweye"
+          value={haweye}
+          onChange={(event) => setHaweye(event.target.value)}
+          required
+        ></input>
+        <label>Subject of request:</label>
+        <input
+          id="sub"
+          name="sub"
+          value={sub}
+          onChange={(event) => setSub(event.target.value)}
+          required
+        ></input>
+        <label>Your request:</label>
+        <textarea
+          id="textarea"
+          name="content"
+          value={content}
+          onChange={(event) => setContent(event.target.value)}
+          required
+        ></textarea>
+        <button className="btn" onClick={Click}>
+          Send
+        </button>
       </div>
     </div>
   );

@@ -1,28 +1,25 @@
 import React from "react";
+import "./Home.css";
 
 function Home() {
   return (
     <div className="body">
-      <div>
-        <div>
-        <label id="date" name="date">
-            Date of today
-          </label>
-          </div>
-        <div>
-          <label id="welcome" name="welcome">
-            Hi user
-          </label>
-        </div>
-        <div>
-          <label id="request" name="request">
-            For any request or complaint
-          </label>
-        </div>
-        <div className="btn-div">
-          
-          <button className="btn">Contact Us</button>
-        </div>
+      <label id="header" name="header">
+        Municipality for you
+      </label>
+
+      <img
+        src="https://i.ibb.co/h22gkZt/20160518-185643.jpg"
+        alt="photo of the town"
+      ></img>
+
+      <label id="request" name="request">
+        For any request or complaint
+      </label>
+      <button className="btn">Contact us</button>
+      <div className="second-row">
+        <button className="btn">Sign in</button>
+        <button className="btn">Sign up</button>
       </div>
     </div>
   );
