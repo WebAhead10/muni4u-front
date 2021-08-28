@@ -13,9 +13,6 @@ function Nav() {
           <a href="/">Home</a>
         </li>
         <li>
-          <a href="/profile">profile</a>
-        </li>
-        <li>
           <a href="/signIn">sign In</a>
         </li>
         <li>
