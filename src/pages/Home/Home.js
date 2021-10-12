@@ -4,7 +4,7 @@ import "./Home.css";
 function Home() {
   return (
     <div className="body">
-      <label id="header" name="header">
+      <label id="mainHeader" name="header">
         Municipality for you
       </label>
 
@@ -16,10 +16,10 @@ function Home() {
       <label id="request" name="request">
         For any request or complaint
       </label>
-      <button className="btn">Contact us</button>
+      <button className="btn" onClick={() => window.location.href = '/request'} >Contact us</button>
       <div className="second-row">
-        <button className="btn">Sign in</button>
-        <button className="btn">Sign up</button>
+        <button className="btn" onClick={() => window.location.href = '/signIn'}>Sign in</button>
+        <button className="btn" onClick={() => window.location.href = '/signUp'}>Sign up</button>
       </div>
     </div>
   );

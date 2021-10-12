@@ -22,7 +22,7 @@ function Nav() {
           <a href="/request">request</a>
         </li>
       </div>
-      <div id="search-icon" className="search-icon">
+      {/* <div id="search-icon" className="search-icon">
         <span className="fas fa-search"></span>
       </div>
       <div id="cancel-icon" className="cancel-icon">
@@ -35,8 +35,8 @@ function Nav() {
           placeholder="Search"
           required
         />
-        <button type="submit" className="fas fa-search"></button>
-      </form>
+        <button type="submit" className="fas fa-search"></button> */}
+      {/* </form> */}
     </nav>
   );
 

@@ -63,19 +63,25 @@ h3 {
   size: initial;
   background-repeat: no-repeat;
 }
-#header{
-  margin: 10px;
-  margin-left: 8vh;
 
+#header {
+  margin: 15vh 15vh 2vh 8vh;
+  position: absolute;
+  left: 40vw;
+  z-index: 10;
+  top: 7;
+  font-size: 150%;
 }
-.content{
-  margin: 35px;
+
+.content {
+  margin: 20px;
   display: flex;
   flex-direction: column;
   margin-left: 1vh;
 
 }
-#textarea{
+
+#textarea {
   color: #426a5a;
   font-family: Georgia, "Times New Roman", Times, serif;
   /* margin-bottom: 1vh; */
@@ -83,13 +89,15 @@ h3 {
   background: #cee0d96b;
 
 }
-.address{
+
+.address {
   display: flex;
   flex-direction: column;
   height: 100vh;
-  background-image: url("https://i.ibb.co/kQ7tK6L/spikes.png"); 
-  
+  background-image: url("https://i.ibb.co/kQ7tK6L/spikes.png");
+
 }
+
 label {
   color: #426a5a;
   font-family: Georgia, "Times New Roman", Times, serif;
